@@ -141,6 +141,9 @@
   <ItemGroup>
     <ClCompile Include="Solution.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="2022.5.11.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
