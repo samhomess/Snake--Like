@@ -1,131 +1,92 @@
 #include <iostream>
-#include <conio.h>
-#include <windows.h>
+#include "Book.h"
 
-class TV
-{
-public : 
-    void RemoteControl_UP()
-    {
-        channel++;
-
-        if (channel > 10)
-        {
-            channel = 0;
-        }
-
-        std::cout << "channel : " << channel << " 번 " << std::endl;
-    }
-
-private :
-    int channel = 0;
-    int volume = 0;
-};
-
-class Transportation 
-{
-protected :
-    std::string name;
-
-    float speed = 0.0;
-    int wheel = 0;
-    int handle = 0;
-};
-
-class car : public Transportation
+class Person 
 {
 public :
-
-    void info()
+    // 생성자
+    Person()
     {
-        speed = 100;
-        wheel = 4;
-        handle = 1;
-        name = "Sonata";
-
-        std::cout << "Name : " << name << std::endl;
-        std::cout << "Speed : " << speed << std::endl;
-        std::cout << "Wheel : " << wheel << std::endl;
-        std::cout << "handle : " << handle << std::endl;
+        std::cout << "Create Person" << std::endl;
     }
-};
 
-class airplane : public Transportation
-{
-public : 
-    void info()
+    // 소멸자
+    ~Person()
     {
-        speed = 400;
-        wheel = 3;
-        handle = 2;
-        name = "KF15";
-
-        std::cout << "Name : " << name << std::endl;
-        std::cout << "Speed : " << speed << std::endl;
-        std::cout << "Wheel : " << wheel << std::endl;
-        std::cout << "handle : " << handle << std::endl;
+        std::cout << "Delete Person" << std::endl;
     }
+
+    void Info()
+    {
+        std::cout << age << std::endl;
+        std::cout << weight << std::endl;
+        std::cout << name << std::endl;
+    }
+
+    int age;
+    float weight;
+    std::string name;
+
 };
-
-
-
 
 int main()
+
 {
-    // 추상화
+    Book naver;
+
+    naver.Read();
+
+    // 동적 할당 배열
     /*
-    TV LG_TV; 
+    int * ptr = new int[3];
 
-    airplane A10;
-    car B10;
+    ptr[0] = 1000;
+    ptr[1] = 2000;
+    ptr[2] = 3000;
 
-    while (1)
+    for (int i = 0; i < 3; i++)
     {
-        if (GetAsyncKeyState(VK_RETURN))
-        {
-            A10.info();
-
-            std::cout << std::endl;
-
-            B10.info();
-
-            std::cout << std::endl;
-
-            Sleep(100);
-        }
-
-        if (GetAsyncKeyState(VK_SPACE))
-        {
-            LG_TV.RemoteControl_UP();
-            Sleep(100);
-        }
+        std::cout << "ptr 변수가 가리키는 주소 : " << & ptr[i] << std::endl;
+        std::cout << ptr[i] << std::endl;
     }
+
+    // 동적 할당을 했을 때 배열 형태로 메모리를 할당하게 되면 메모리를 해제할 때 배열 형태로 해제해주어야 합니다.
+    delete [] ptr;
+
+    // 스택             힙
+    // ptr -------> 
+    // 
+    // 댕글링 포인터
+    // 이미 해제된 메모리를 가리키는 포인터입니다.
     */
-  
-    // 스택
-    //   4 byte
-    // [ [ ptr ]        ]     
-    // 힙  |
-    // [  [200][500][][][][][] ]
 
-    {
-        // new는 메모리를 동적으로 할당하는 연산자입니다.
-        // 힙 영역에 메모리가 4byte가 할당되고 10이라는 값을 저장합니다.
-        int * ptr = new int[10]; // 4 x 10 = 40 바이트
+    // 객체 할당과 해제
+    /*
+    Person * man = new Person();
 
-        //   힙
-        //  4byte  
-        // [    ] 
-        //   0        
+ 
+    man->age = 20;
+    man->weight = 70.5;
+    man->name = "KimGeumSoo";
 
-        // 4 byte
-        *ptr = 100;
-     
-        std::cout << "ptr이 가리키는 값 :" << *ptr << std::endl;
+    man->Info();
+    
+    delete man; 
+    */
+    
+    // 참조형 변수
+    /*
+    int value = 10;
 
-        int value = 100;  
-    } // <- value [100] 해제 ptr도 해제가 되었습니다.  
+    int & ref = value;
+   
+    std::cout << &value << std::endl;
 
+    ref = 300;
+
+    std::cout << "value의 값 : " << value << std::endl;
+    std::cout << "ref의 값 : " << ref << std::endl;
+    */
 
     return 0;
 }
