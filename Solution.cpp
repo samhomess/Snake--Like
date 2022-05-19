@@ -1,91 +1,64 @@
 #include <iostream>
-#include "Book.h"
 
-class Person 
+using namespace std;
+
+namespace A_SPACE
 {
-public :
-    // 생성자
-    Person()
+    int value = 100;
+
+    void Function()
     {
-        std::cout << "Create Person" << std::endl;
+        std::cout << "A Space" << std::endl;
+    }
+}
+
+namespace B_SPACE
+{
+    int value = 200;
+
+    void Function()
+    {
+        cout << "B Space" << endl;    
     }
 
-    // 소멸자
-    ~Person()
+    namespace B_COPY_SPACE
     {
-        std::cout << "Delete Person" << std::endl;
+        int value = 800;
     }
+}
 
-    void Info()
-    {
-        std::cout << age << std::endl;
-        std::cout << weight << std::endl;
-        std::cout << name << std::endl;
-    }
-
-    int age;
-    float weight;
-    std::string name;
-
-};
+using namespace A_SPACE;
 
 int main()
-
 {
-    Book naver;
-
-    naver.Read();
-
-    // 동적 할당 배열
+    // 범위 기반 반복문
     /*
-    int * ptr = new int[3];
+    // 시작점과 끝점을 알려주지 않아도 처음부터 끝까지 순회를 해주는 반복문입니다.
 
-    ptr[0] = 1000;
-    ptr[1] = 2000;
-    ptr[2] = 3000;
+    int array[5] = { 13,66,100,72,5 };
+    double data[5] = { 10.6, 8.75, 6.33, 1.23, 4.41 };
 
-    for (int i = 0; i < 3; i++)
-    {
-        std::cout << "ptr 변수가 가리키는 주소 : " << & ptr[i] << std::endl;
-        std::cout << ptr[i] << std::endl;
+    // 범위 기반 반복문은 배열에 있는 요소에 접근할 수 없다.
+    // 데이터 리스트(array, data)요소를 Element 변수에 복사를 하기 때문에 요소에 접근할 수 없다.
+    // 복사를 했으므로 복사 비용이 발생합니다.
+
+    // const를 사용하게 되면 Element의 값을 변경할 수 없다.
+    for (auto & Element : array)
+    { 
+        Element = 0;
+        std::cout << Element << std::endl;
     }
-
-    // 동적 할당을 했을 때 배열 형태로 메모리를 할당하게 되면 메모리를 해제할 때 배열 형태로 해제해주어야 합니다.
-    delete [] ptr;
-
-    // 스택             힙
-    // ptr -------> 
-    // 
-    // 댕글링 포인터
-    // 이미 해제된 메모리를 가리키는 포인터입니다.
     */
 
-    // 객체 할당과 해제
+    // 범위 지정 연산자
     /*
-    Person * man = new Person();
+    // 이름 공간에서 식별자를 지정해주는 연산자입니다.
+    cout << value << endl;
+    cout << value << endl;
+    A_SPACE::Function();
+    Function();
 
- 
-    man->age = 20;
-    man->weight = 70.5;
-    man->name = "KimGeumSoo";
-
-    man->Info();
-    
-    delete man; 
-    */
-    
-    // 참조형 변수
-    /*
-    int value = 10;
-
-    int & ref = value;
-   
-    std::cout << &value << std::endl;
-
-    ref = 300;
-
-    std::cout << "value의 값 : " << value << std::endl;
-    std::cout << "ref의 값 : " << ref << std::endl;
+    cout << B_SPACE::B_COPY_SPACE::value << std::endl;
     */
 
     return 0;
