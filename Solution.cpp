@@ -1,65 +1,103 @@
-#include <iostream>
+#include "Shape.h"
 
 using namespace std;
 
-namespace A_SPACE
+class Animal
 {
-    int value = 100;
+public :
+    void Sound();
+    void Sleeping();
 
-    void Function()
-    {
-        std::cout << "A Space" << std::endl;
-    }
+private:
+    int m_size;
+    float m_weight;
+    std::string m_name;
+};
+
+void Animal::Sound()
+{
+    std::cout << "Sound" << std::endl;
 }
 
-namespace B_SPACE
+void Animal::Sleeping()
 {
-    int value = 200;
-
-    void Function()
-    {
-        cout << "B Space" << endl;    
-    }
-
-    namespace B_COPY_SPACE
-    {
-        int value = 800;
-    }
+    std::cout << "Sleeping" << std::endl;
 }
 
-using namespace A_SPACE;
+// 인라인 함수
+/*
+inline void Function(int x)
+{
+    std::cout << "x의 값 : " << x << std::endl;
+}
+*/
 
 int main()
 {
-    // 범위 기반 반복문
+    // 멤버 초기화 리스트
     /*
-    // 시작점과 끝점을 알려주지 않아도 처음부터 끝까지 순회를 해주는 반복문입니다.
+    Shape rectangle(50,"Circle");
+    */
 
-    int array[5] = { 13,66,100,72,5 };
-    double data[5] = { 10.6, 8.75, 6.33, 1.23, 4.41 };
+    // 과잉수
+    /*
+    int value;
+    int result = 0;
 
-    // 범위 기반 반복문은 배열에 있는 요소에 접근할 수 없다.
-    // 데이터 리스트(array, data)요소를 Element 변수에 복사를 하기 때문에 요소에 접근할 수 없다.
-    // 복사를 했으므로 복사 비용이 발생합니다.
+    std::cin >> value;
 
-    // const를 사용하게 되면 Element의 값을 변경할 수 없다.
-    for (auto & Element : array)
-    { 
-        Element = 0;
-        std::cout << Element << std::endl;
+    for (int i = 1; i < value; i++)
+    {   
+        if (value % i == 0)
+        {
+            result += i;
+        }
+    }
+
+    if (result > value)
+    {
+        std::cout << "과잉수" << std::endl;
+    }
+    else
+    {
+        std::cout << "과잉수가 아닙니다." << std::endl;
     }
     */
 
-    // 범위 지정 연산자
+    // 클래스 외부 함수
     /*
-    // 이름 공간에서 식별자를 지정해주는 연산자입니다.
-    cout << value << endl;
-    cout << value << endl;
-    A_SPACE::Function();
-    Function();
-
-    cout << B_SPACE::B_COPY_SPACE::value << std::endl;
+    Animal cat;
+    cat.Sound();
     */
+
+    // 인라인 함수
+    /*
+    Function(10);     
+    */
+
+    // 부족수
+    int value;
+    int result = 0;
+
+    cin >> value;
+
+    for (int i = 1; i <= value; i++)
+    {
+        if (value % i == 0)
+        {
+            result += i;
+        }
+    }
+
+    if (result < value * 2)
+    {
+        std::cout << "부족수" << std::endl;
+    }
+    else
+    {
+        std::cout << "부족수가 아닙니다." << std::endl;
+    }
+
 
     return 0;
 }
