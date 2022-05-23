@@ -1,104 +1,62 @@
-#include "Shape.h"
-
-using namespace std;
-
-class Animal
-{
-public :
-    void Sound();
-    void Sleeping();
-
-private:
-    int m_size;
-    float m_weight;
-    std::string m_name;
-};
-
-void Animal::Sound()
-{
-    std::cout << "Sound" << std::endl;
-}
-
-void Animal::Sleeping()
-{
-    std::cout << "Sleeping" << std::endl;
-}
-
-// 인라인 함수
-/*
-inline void Function(int x)
-{
-    std::cout << "x의 값 : " << x << std::endl;
-}
-*/
+#include "Object.h"
+#include <vector>
+#include <windows.h>
+#include <conio.h>
 
 int main()
 {
-    // 멤버 초기화 리스트
+    // this 포인터
     /*
-    Shape rectangle(50,"Circle");
+    Object Computer(10, 20, 30); 
+    Object Phone(5, 10, 15);
+
+    Computer.Address();
+    Phone.Address();
     */
+    
 
-    // 과잉수
-    /*
-    int value;
-    int result = 0;
+    std::vector<std::string> arrow = {"←", "→", "↑", "↑", "↓" };
 
-    std::cin >> value;
+    //  vector     stack --------> heap 
+    //  0   1   2   3   4
+    // [1] [2] [7] [3] [5]
 
-    for (int i = 1; i < value; i++)
-    {   
-        if (value % i == 0)
+    // 배열의 장점
+    //              
+    //  0   2   3   4   접근 : O(1)
+    // [1] [3] [4] [5]  삽입과 삭제 : O(n)
+
+
+    while (1)
+    {
+        // [] [] [] [] []
+
+        for (auto Element : arrow)
         {
-            result += i;
+            std::cout << Element << "  ";
         }
-    }
 
-    if (result > value)
-    {
-        std::cout << "과잉수" << std::endl;
-    }
-    else
-    {
-        std::cout << "과잉수가 아닙니다." << std::endl;
-    }
-    */
-
-    // 클래스 외부 함수
-    /*
-    Animal cat;
-    cat.Sound();
-    */
-
-    // 인라인 함수
-    /*
-    Function(10);     
-    */
-
-    // 부족수
-    int value;
-    int result = 0;
-
-    cin >> value;
-
-    for (int i = 1; i <= value; i++)
-    {
-        if (value % i == 0)
+        if (arrow.size() == 0)
         {
-            result += i;
+            break;
         }
-    }
 
-    if (result < value * 2)
-    {
-        std::cout << "부족수" << std::endl;
-    }
-    else
-    {
-        std::cout << "부족수가 아닙니다." << std::endl;
-    }
+        int key = _getch();
 
+        system("cls");
 
+        switch (key)
+        {
+           case 32 :
+               arrow.pop_back();
+              break;
+           case 77:
+               arrow.push_back("→");
+              break;
+        }
+
+    }
+     
     return 0;
 }
 

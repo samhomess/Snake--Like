@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="Model.cpp" />
+    <ClCompile Include="Object.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="Solution.cpp" />
   </ItemGroup>
@@ -152,8 +153,10 @@
     <ClInclude Include="2022.5.17.h" />
     <ClInclude Include="2022.5.18.h" />
     <ClInclude Include="2022.5.19.h" />
+    <ClInclude Include="2022.5.20.h" />
     <ClInclude Include="Book.h" />
     <ClInclude Include="Model.h" />
+    <ClInclude Include="Object.h" />
     <ClInclude Include="Shape.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
