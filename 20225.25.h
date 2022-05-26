@@ -10,6 +10,7 @@ int value = 5;
 
 using namespace std;
 
+
 // main
 /*
 int main()
@@ -55,7 +56,6 @@ int main()
 		}
 	}
 
-
 	// 반복자
 	// 데이터 컨테이너의 요소를 가리키는 포인터입니다.
 
@@ -80,13 +80,11 @@ int main()
 	// [5]     [10]     [15]     [20]   [  ]
 	// iter = 0 -> 1 ->
 
-
 	for (vector<int>::iterator iter = Score.begin(); iter != Score.end(); iter++)
 	{
 		std::cout << &iter << std::endl;
 		std::cout << *iter << std::endl;
 	}
-
 
 	int value = 100;
 
