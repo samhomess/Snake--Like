@@ -1,136 +1,137 @@
 #include <iostream>
-#include <set>
 #include <string>
 
-void Function(int x)
-{
-	std::cout << x << std::endl;
-}
-
-void Function(int x, int y)
-{
-	std::cout << x << "," << y << std::endl;
-}
-
-void Function(char x)
-{
-	std::cout << x << std::endl;
-}
-
-// 반환형으로 함수의 오버로딩을 구현할 수 없습니다.
-/*
-int Function(double x)
-{
-	return x;
-}
-*/
-
-class Phone 
+// 가상 함수
+class Animal 
 {
 public:
-	Phone()
+	int x = 100;
+
+	// 가상 함수
+	virtual void Sound()
 	{
-		std::cout << "따르릉~" << std::endl;
+		std::cout << "울음소리~" << std::endl;
 	}
-
-	Phone(int x, int y)
+	
+private:
+	int mouth;
+	int eye;
+	int leg;
+};
+class Dog : public Animal
+{
+public :
+	void Sound()
 	{
-		call = x;
-		size = y;
-
-		std::cout << call << std::endl;
-		std::cout << size << std::endl;
+		std::cout << "멍멍~" << std::endl;
 	}
+};
+class Cat : public Animal
+{
+public :
+	void Sound()
+	{
+		std::cout << "냐옹~" << std::endl;
+	}
+};
+class Duck : public Animal
+{
+public :
+	void Sound()
+	{
+		std::cout << "꽥꽥~" << std::endl;
+	}
+};
 
-private :
-	int call;
-	int size;
+// 순수 가상 함수
+class Pen
+{
+   // 순수 가상 함수
+   virtual void Drawing() = 0;
+};
+class Circle : public Pen
+{
+public :
+	void Drawing()
+	{
+		std::cout << "동그라미" << std::endl;
+	} 
+};
+class Rectangle : public Pen
+{
+public :
+	void Drawing()
+	{
+		std::cout << "네모" << std::endl;
+	}
+};
+class Star : public Pen
+{
+public :
+	void Drawing()
+	{
+		std::cout << "별" << std::endl;
+	}
 };
 
 int main()
 {
-	// set
+	// 가상 함수
 	/*
-	// std::map -> key와 value 
-	// key을 활용해서 데이터를 확인합니다.
-	
-	// set -> key
-	// key값이 중복이 허용되지 않습니다.
-	// insert 원소가 자동으로 정렬됩니다.
+	Animal * animal = new Dog;
+	Cat * cat = new Cat;
+	Duck* duck = new Duck;
 
+	animal->Sound();
+	animal->Sound();
 
-	std::set<int> data;
-	std::set<int>::iterator iter;
+	animal = cat;
+	animal->Sound();
 
-	data.insert(10);
-	data.insert(80);
-	data.insert(35);
-	data.insert(40);
-	data.insert(50);
-
-	for (iter = data.begin(); iter != data.end(); iter++)
-	{
-		std::cout << *iter << std::endl;
-
-	}
-
-	// [10] [35] [40] [50] [80]
-
-	iter = data.find(77);
-
-	if (iter != data.end())
-	{
-		std::cout << "데이터가 존재합니다." << std::endl;
-	}
-	else
-	{
-		std::cout << "데이터가 없습니다." << std::endl;
-	}
+	animal = duck;
+	animal->Sound();
 	*/
 
-	// 함수의 오버로딩
+	// 순수 가상 함수
 	/*
-	   다른 매개변수들을 가진 같은 이름의 함수를 여러 개 정의할 수 있습니다.
-	
-	   Function('G');
-	   Function(10, 20);
+	// 순수 가상 함수는 자신의 객체만 가리킬 수 있습니다.
+	// 하위 클래스 반드시 재정의되어야 하는 멤버 함수
+	Star * star = new Star;
+	star->Drawing();
 
-	   Phone iPhone(10,20);
+	Rectangle * rectangle = new Rectangle;
+	rectangle->Drawing();
 	*/
-
-
-	// O X 퀴즈
-	// "OOXXOXXOOO와 같은 OX퀴즈의 결과가 있습니다."
-	// O는 문제를 맞춘 것이고, X는 틀린 것입니다.
-    // 문제를 맞은 경우는 그 문제의 점수는 그 문제까지 연속된 O의 개수가 됩니다.
-	// "OOXXOXXOOO" = 1 + 2 + 0 + 0 + 1 + 0 + 0 + 1 + 2 + 3 = 10
-
-	// 입력받을 문자배열을 선언하고
-	// 원하는 OX를 입력하세요
+	
+	// 프로그래머스 1 단계
+    // 완벽한 문자열 판별하기
 	/*
-	int result = 0;
+	int count = 0;
+
 	std::string input;
-	int count = 1;
-
 	std::getline(std::cin, input);
 
 	for (int i = 0; i < input.length(); i++)
 	{
-		if (input[i] == 'O')
+		for (int j = 48; j <= 57; j++)
 		{
-			result += count;
-			count++;
-		}
-		
-		if (input[i] == 'X')
-		{
-			count = 1;
+			if (input[i] == (char)j)
+			{
+				count++;
+			}
 		}
 	}
 
-	std::cout << result << std::endl;
+	if (count > 0)
+	{
+		std::cout << "완벽한 문자열이 아닙니다." << std::endl;
+	}
+	else
+	{
+		std::cout << "완벽한 문자열" << std::endl;
+	}
 	*/
-
 
 	return 0;
 }
+
