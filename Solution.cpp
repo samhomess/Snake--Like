@@ -1,185 +1,67 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
-#include <conio.h>
-#include <windows.h>
-#include <time.h>
 
-#define BufferWidth 80
-#define BufferHeight 40
-
-int move = 1;
-int ScreenIndex;
-HANDLE Screen[2];
-
-struct obj 
+// 가상 상속
+/*
+class A
 {
-	int x;
-	int y;
-	const char * shape;
+public :
+	int A_value = 10;
 };
 
-obj * Player;
-obj * Booster;
-
-void Screen_Init()
+class B : virtual public A  
 {
-	CONSOLE_CURSOR_INFO cursor;
-	COORD size = { BufferWidth, BufferHeight };
-	SMALL_RECT rect = { 0,0, BufferWidth - 1, BufferHeight - 1 };
+public :
+	int B_value = 20;
+};
 
-	// 화면 2개를 생성합니다.
-	Screen[0] = CreateConsoleScreenBuffer
-	(
-		GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, CONSOLE_TEXTMODE_BUFFER,NULL
-	);
-	SetConsoleScreenBufferSize(Screen[0], size);
-	SetConsoleWindowInfo(Screen[0], TRUE, &rect);
-
-	Screen[1] = CreateConsoleScreenBuffer
-	(
-		GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, CONSOLE_TEXTMODE_BUFFER, NULL
-	);
-	SetConsoleScreenBufferSize(Screen[1], size);
-	SetConsoleWindowInfo(Screen[1], TRUE, &rect);
-
-	// 커서 숨기기
-	cursor.dwSize = 1;
-	cursor.bVisible = false;
-	SetConsoleCursorInfo(Screen[0], &cursor);
-	SetConsoleCursorInfo(Screen[1], &cursor);
-}
-
-void ScreenFlipping()
+class C : virtual public A
 {
-	SetConsoleActiveScreenBuffer(Screen[ScreenIndex]);
-	ScreenIndex = !ScreenIndex;
-}
+public :
+	int C_value = 30;
 
-void ScreenClear()
+};
+
+class D : public B, public C
 {
-	COORD Coord = { 0,0 };
-	DWORD dw;
-	FillConsoleOutputCharacter(Screen[ScreenIndex], ' ', BufferWidth * BufferHeight, Coord, &dw);
-}
+public :
+	int D_value = 50;
+};
+*/
 
-void ScreenRelese()
+// 템플릿 
+/*
+// 함수나 클래스를 개별적으로 다시 작성하지 않아도, 여러 자료형으로 사용할 수 있도록 만들어 진 기능입니다.
+// 함수의 기능은 명확하지만, 자료형을 모호하게 설정하는 것입니다.
+template<typename T>
+T Add(T x, T y)
 {
-	CloseHandle(Screen[0]);
-	CloseHandle(Screen[1]);
+	return x + y;
 }
-
-void ScreenPrint(int x, int y, const char * string)
-{
-	COORD CursorPosition = { x, y };
-	DWORD dw;
-
-	SetConsoleCursorPosition(Screen[ScreenIndex], CursorPosition);
-	WriteFile(Screen[ScreenIndex], string, strlen(string), &dw, NULL);
-}
-
-void PlayerInitialize()
-{
-	Player = (obj*)malloc(sizeof(obj));
-	Player->x = 5;
-	Player->y = 5;
-	Player->shape = "◎";
-}
-
-void BoosterInitialize()
-{
-	Booster = (obj*)malloc(sizeof(obj));
-	Booster->x = rand() % 9 + 1;
-	Booster->y = rand() % 9 + 1;
-	Booster->shape = "⊙";
-}
-
-void Render()
-{
-	ScreenPrint(Player->x, Player->y, Player->shape);
-	ScreenPrint(Booster->x, Booster->y, Booster->shape);
-}
-
-void KeyBoard()
-{
-	switch (move)
-	{
-	case 1 : Player->x++;
-		break;
-	case 2 : Player->x--;
-		break;	
-	case 3 : Player->y--;	
-		break;	
-	case 4 : Player->y++;
-		break;
-	}
-
-	if (GetAsyncKeyState(VK_RIGHT))
-	{
-		move = 1;
-	}
-
-	if (GetAsyncKeyState(VK_LEFT))
-	{
-		move = 2;
-	}
-
-	if (GetAsyncKeyState(VK_UP))
-	{
-
-		move = 3;
-	}
-
-	if (GetAsyncKeyState(VK_DOWN))
-	{
-
-		move = 4;
-	}
-}
+*/
 
 int main()
-{ 
-	// 지렁이 게임
+{
+	// 다이아몬드 상속
 	/*
-	// [1]
-	// Left Right Up Down
-	// ex) Up 키를 눌렀을 때 Up 방향으로 계속 이동합니다.
-
-	// 지렁이 몸체 
-	// Level (1) 몸체가 5개가 되면 Clear
-	// ○○○○○
-	// Level (2) 몸체가 7개가 되면 Clear
-	// ○○○○○○○
-	// Level (3) 몸체가 9개가 되면 Clear
-	// ○○○○○○○○○
-
-	// 충돌()
-	// 양식장 안에서 ★ 아이템이 랜덤으로 생성되어야 합니다.
-	// ★과 충돌을 하게 되면 몸체가 늘어나게 됩니다.
-	// 양식장과 충돌하게 되면 게임 오버가 되면서 게임이 초기화됩니다.
+	D D_object;
+	D_object.A_value = 20;
 	*/
 
-	// 지렁이 소스
-	int move = 4;
+	// 가상 상속
+	/*
+	// B와 C를 가상 상속으로 바꿔주면 한 군데에서만 상속을 보장받을 수 있도록 설정할 수 있습니다.
+	D D_object;
+	D_object.A_value = 1000;
 
-	srand(time(NULL));
+	std::cout << D_object.A_value << std::endl;
+	*/
 
-	Screen_Init();
-	PlayerInitialize();
-	BoosterInitialize();
+	// 템플릿
+	/*
+	std::cout << Add<int>(5, 5) << std::endl;
+	std::cout << Add<float>(34.58, 51.36) << std::endl;
+    */
 
-	while (1)
-	{
-		KeyBoard();
-		Render();
-
-		ScreenFlipping();
-		ScreenClear();
-
-		Sleep(100);
-	}
-
-	ScreenRelese();
 
 	return 0;
 }
-
