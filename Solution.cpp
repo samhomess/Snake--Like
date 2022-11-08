@@ -1,185 +1,99 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
-#include <conio.h>
-#include <windows.h>
-#include <time.h>
+#include <SFML/Graphics.hpp>
 
-#define BufferWidth 80
-#define BufferHeight 40
+using namespace std;
 
-int move = 1;
-int ScreenIndex;
-HANDLE Screen[2];
-
-struct obj 
+// is a 관계
+class Person
 {
-	int x;
-	int y;
-	const char * shape;
+    // final이란?
+    // 더 이상 클래스나 가상함수 상속받지 않고 재정의할 수 없도록
+    // 설정하는 키워드입니다.
+
+    virtual void Think()
+    {
+        cout << "Idea" << endl;
+    }
+
+    virtual void Speaking () final
+    {
+        cout << "Speak" << endl;
+    }
 };
 
-obj * Player;
-obj * Booster;
-
-void Screen_Init()
+class Student final : public Person
 {
-	CONSOLE_CURSOR_INFO cursor;
-	COORD size = { BufferWidth, BufferHeight };
-	SMALL_RECT rect = { 0,0, BufferWidth - 1, BufferHeight - 1 };
+    void Think()
+    {
+        cout << "Student Idea" << endl;
+    }
 
-	// 화면 2개를 생성합니다.
-	Screen[0] = CreateConsoleScreenBuffer
-	(
-		GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, CONSOLE_TEXTMODE_BUFFER,NULL
-	);
-	SetConsoleScreenBufferSize(Screen[0], size);
-	SetConsoleWindowInfo(Screen[0], TRUE, &rect);
+    // Speaking() 함수는 Person 클래스에서 final로 선언되었기 때문에
+    // 더 이상 사용할 수 없습니다.
+    // void Speaking() { }
+};
 
-	Screen[1] = CreateConsoleScreenBuffer
-	(
-		GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, CONSOLE_TEXTMODE_BUFFER, NULL
-	);
-	SetConsoleScreenBufferSize(Screen[1], size);
-	SetConsoleWindowInfo(Screen[1], TRUE, &rect);
+// Student 클래스는 final로 선언되었기 때문에 더 이상 상속받을 수 없습니다.
+//class ScholarShipStudent : public Student
+//{
+//
+//};
 
-	// 커서 숨기기
-	cursor.dwSize = 1;
-	cursor.bVisible = false;
-	SetConsoleCursorInfo(Screen[0], &cursor);
-	SetConsoleCursorInfo(Screen[1], &cursor);
-}
-
-void ScreenFlipping()
+// has a 관계
+class Gun
 {
-	SetConsoleActiveScreenBuffer(Screen[ScreenIndex]);
-	ScreenIndex = !ScreenIndex;
-}
+private :
+    int bullet;
+public :
+    Gun(int m_bullet) : bullet(m_bullet) {}
 
-void ScreenClear()
+    void Shot()
+    {
+        cout << "Launch" << endl;
+        bullet--;
+    }
+};
+
+class Police : public Gun
 {
-	COORD Coord = { 0,0 };
-	DWORD dw;
-	FillConsoleOutputCharacter(Screen[ScreenIndex], ' ', BufferWidth * BufferHeight, Coord, &dw);
-}
+private :
+    int handcuff;
+public:
+    Police(int m_bullet, int m_handcuff) : Gun(m_bullet), handcuff(m_handcuff) {}
 
-void ScreenRelese()
-{
-	CloseHandle(Screen[0]);
-	CloseHandle(Screen[1]);
-}
+    void Handcuffed()
+    {
+        cout << "Snap" << endl;
+        handcuff--;
+    }
+};
 
-void ScreenPrint(int x, int y, const char * string)
-{
-	COORD CursorPosition = { x, y };
-	DWORD dw;
-
-	SetConsoleCursorPosition(Screen[ScreenIndex], CursorPosition);
-	WriteFile(Screen[ScreenIndex], string, strlen(string), &dw, NULL);
-}
-
-void PlayerInitialize()
-{
-	Player = (obj*)malloc(sizeof(obj));
-	Player->x = 5;
-	Player->y = 5;
-	Player->shape = "◎";
-}
-
-void BoosterInitialize()
-{
-	Booster = (obj*)malloc(sizeof(obj));
-	Booster->x = rand() % 9 + 1;
-	Booster->y = rand() % 9 + 1;
-	Booster->shape = "⊙";
-}
-
-void Render()
-{
-	ScreenPrint(Player->x, Player->y, Player->shape);
-	ScreenPrint(Booster->x, Booster->y, Booster->shape);
-}
-
-void KeyBoard()
-{
-	switch (move)
-	{
-	case 1 : Player->x++;
-		break;
-	case 2 : Player->x--;
-		break;	
-	case 3 : Player->y--;	
-		break;	
-	case 4 : Player->y++;
-		break;
-	}
-
-	if (GetAsyncKeyState(VK_RIGHT))
-	{
-		move = 1;
-	}
-
-	if (GetAsyncKeyState(VK_LEFT))
-	{
-		move = 2;
-	}
-
-	if (GetAsyncKeyState(VK_UP))
-	{
-
-		move = 3;
-	}
-
-	if (GetAsyncKeyState(VK_DOWN))
-	{
-
-		move = 4;
-	}
-}
 
 int main()
-{ 
-	// 지렁이 게임
-	/*
-	// [1]
-	// Left Right Up Down
-	// ex) Up 키를 눌렀을 때 Up 방향으로 계속 이동합니다.
+{
+    Police police(10, 3);
 
-	// 지렁이 몸체 
-	// Level (1) 몸체가 5개가 되면 Clear
-	// ○○○○○
-	// Level (2) 몸체가 7개가 되면 Clear
-	// ○○○○○○○
-	// Level (3) 몸체가 9개가 되면 Clear
-	// ○○○○○○○○○
+    police.Shot();
+    police.Handcuffed();
 
-	// 충돌()
-	// 양식장 안에서 ★ 아이템이 랜덤으로 생성되어야 합니다.
-	// ★과 충돌을 하게 되면 몸체가 늘어나게 됩니다.
-	// 양식장과 충돌하게 되면 게임 오버가 되면서 게임이 초기화됩니다.
-	*/
 
-	// 지렁이 소스
-	int move = 4;
+    sf::RenderWindow window(sf::VideoMode(200, 200), "Game SFML");
+    sf::CircleShape shape(100.f);
+    shape.setFillColor(sf::Color::Green);
 
-	srand(time(NULL));
+    while (window.isOpen())
+    {
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
 
-	Screen_Init();
-	PlayerInitialize();
-	BoosterInitialize();
+        window.clear();
+        window.draw(shape);
+        window.display();
+    }
 
-	while (1)
-	{
-		KeyBoard();
-		Render();
-
-		ScreenFlipping();
-		ScreenClear();
-
-		Sleep(100);
-	}
-
-	ScreenRelese();
-
-	return 0;
+    return 0;
 }
-

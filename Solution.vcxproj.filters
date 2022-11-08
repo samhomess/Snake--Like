@@ -13,75 +13,10 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Class Data">
-      <UniqueIdentifier>{8fbb6e82-ede1-4f7d-bc3e-01285bddde44}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Solution.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Book.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Model.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Shape.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Object.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="2022.5.11.h">
-      <Filter>Class Data</Filter>
-    </ClInclude>
-    <ClInclude Include="2022.5.12.h">
-      <Filter>Class Data</Filter>
-    </ClInclude>
-    <ClInclude Include="2022.5.13.h">
-      <Filter>Class Data</Filter>
-    </ClInclude>
-    <ClInclude Include="2022.5.16.h">
-      <Filter>Class Data</Filter>
-    </ClInclude>
-    <ClInclude Include="Book.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="2022.5.17.h">
-      <Filter>Class Data</Filter>
-    </ClInclude>
-    <ClInclude Include="Model.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="2022.5.18.h">
-      <Filter>Class Data</Filter>
-    </ClInclude>
-    <ClInclude Include="2022.5.19.h">
-      <Filter>Class Data</Filter>
-    </ClInclude>
-    <ClInclude Include="Shape.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="2022.5.20.h">
-      <Filter>Class Data</Filter>
-    </ClInclude>
-    <ClInclude Include="Object.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="2022.5.23.h">
-      <Filter>Class Data</Filter>
-    </ClInclude>
-    <ClInclude Include="2022.5.24.h">
-      <Filter>Class Data</Filter>
-    </ClInclude>
-    <ClInclude Include="20225.25.h">
-      <Filter>Class Data</Filter>
-    </ClInclude>
-    <ClInclude Include="2022.5.26.h">
-      <Filter>Class Data</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
