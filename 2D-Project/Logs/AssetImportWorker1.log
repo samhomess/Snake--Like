@@ -1,0 +1,385 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.14f1 (eee1884e7226) revision 15655304'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Education' Language: 'ko' Physical Memory: 16318 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.14f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/Users/Administrator/Desktop/새 폴더/2D-Project
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+54254
+Successfully changed project path to: C:/Users/Administrator/Desktop/새 폴더/2D-Project
+C:/Users/Administrator/Desktop/새 폴더/2D-Project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 117.57 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.14f1 (eee1884e7226)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Administrator/Desktop/새 폴더/2D-Project/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 (ID=0x2184)
+    Vendor:   NVIDIA
+    VRAM:     5991 MB
+    Driver:   31.0.15.1694
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56884
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.015339 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 112.94 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.918 seconds
+Domain Reload Profiling:
+	ReloadAssembly (919ms)
+		BeginReloadAssembly (111ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (638ms)
+			LoadAssemblies (110ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (152ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (348ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (113ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (162ms)
+				ProcessInitializeOnLoadMethodAttributes (60ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.012106 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Administrator\Desktop\새 폴더\2D-Project\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Administrator\Desktop\새 폴더\2D-Project\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 109.94 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.646 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1647ms)
+		BeginReloadAssembly (177ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (29ms)
+		EndReloadAssembly (1283ms)
+			LoadAssemblies (158ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (341ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (89ms)
+			SetupLoadedEditorAssemblies (647ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (110ms)
+				BeforeProcessingInitializeOnLoad (143ms)
+				ProcessInitializeOnLoadAttributes (304ms)
+				ProcessInitializeOnLoadMethodAttributes (66ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.76 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4043 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (228.8 KB). Loaded Objects now: 4493.
+Memory consumption went from 155.0 MB to 154.8 MB.
+Total: 5.531400 ms (FindLiveObjects: 0.588400 ms CreateObjectMapping: 0.507900 ms MarkObjects: 4.233100 ms  DeleteObjects: 0.199900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1215110.357651 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Atlas_Mobile_Compressed.png
+  artifactKey: Guid(b16755a802c1e6745980e8b652663dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Atlas_Mobile_Compressed.png using Guid(b16755a802c1e6745980e8b652663dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7427b5c0757796cb1f171a92241ec4e4') in 0.650690 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.387563 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Broom_1.png
+  artifactKey: Guid(dd21cac29f561a0479e19f42bc1a74ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Broom_1.png using Guid(dd21cac29f561a0479e19f42bc1a74ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe8985717c0ee60f27725b1cafb540ec') in 0.049559 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Tree_1.png
+  artifactKey: Guid(17cc0e7b0aae89646a13f03448a48adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Tree_1.png using Guid(17cc0e7b0aae89646a13f03448a48adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4185890b55ab45db4585013569ec0330') in 0.053994 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Pumpkin_3.png
+  artifactKey: Guid(9365d85000c868b4fa63719613f282bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Pumpkin_3.png using Guid(9365d85000c868b4fa63719613f282bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eefb4d39ac6f19db67115ef4fef7f6b1') in 0.040946 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Candy_2.png
+  artifactKey: Guid(8d4c11d0be2c50b4e811451c7532d302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Candy_2.png using Guid(8d4c11d0be2c50b4e811451c7532d302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5330a5d0c67197189500e9a5978a1d1') in 0.044055 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000092 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Jack o lantern_1_V1.png
+  artifactKey: Guid(19b6d76d5ae3d8f44823e5ad3e433918) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Jack o lantern_1_V1.png using Guid(19b6d76d5ae3d8f44823e5ad3e433918) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '774e1fee734ee493275060a4d6b1e809') in 0.049795 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Fence_2.png
+  artifactKey: Guid(d5ec014893cd86546b28ee4fdd8e8b16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Fence_2.png using Guid(d5ec014893cd86546b28ee4fdd8e8b16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14f7fbac4625e4a120265b92648d68db') in 0.039223 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Cauldron_V2.png
+  artifactKey: Guid(fa9001ffd6c33564bb806bc493f3d260) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Cauldron_V2.png using Guid(fa9001ffd6c33564bb806bc493f3d260) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55adbc80ca00337e2970927581d0b3dc') in 0.042390 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Tombstone_3_V1.png
+  artifactKey: Guid(6550e6bb29d01164db84d391920baca2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Tombstone_3_V1.png using Guid(6550e6bb29d01164db84d391920baca2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b69ce85e9bfc9e834a6b3aa6a75612a4') in 0.042476 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Eyes_3_green.png
+  artifactKey: Guid(f7a5fa52e37eff948bde9d33a81b714d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Eyes_3_green.png using Guid(f7a5fa52e37eff948bde9d33a81b714d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02bad469399bb4697fc20c024b2adba3') in 0.040693 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Pumpkin_2.png
+  artifactKey: Guid(b34144db1848531448328f0cdd6ba594) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Pumpkin_2.png using Guid(b34144db1848531448328f0cdd6ba594) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc4c3eb4a0219d0d25fe919fb6373d1c') in 0.043533 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Eyes_2_green.png
+  artifactKey: Guid(b7e39ad2c6d596b48b716c256b142ce0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Eyes_2_green.png using Guid(b7e39ad2c6d596b48b716c256b142ce0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30c8f78d57fbf177816f86649a8c6826') in 0.041173 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Candy_1_V3.png
+  artifactKey: Guid(1fdb1d638f98d8b4c82e078622fb2ddb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Candy_1_V3.png using Guid(1fdb1d638f98d8b4c82e078622fb2ddb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a793d07c8e6d890759588265cda0302') in 0.042465 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Candle_1.png
+  artifactKey: Guid(649e4a9cf671d164d9bca678bf033e14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Candle_1.png using Guid(649e4a9cf671d164d9bca678bf033e14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f20cc07c26615a1668af7d99d57ae821') in 0.037834 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Spider web_2.png
+  artifactKey: Guid(ddf97f80391b13b47b4ec46f4c1ef252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Spider web_2.png using Guid(ddf97f80391b13b47b4ec46f4c1ef252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81aecfeaa3a3cd404d6a2c8cba195452') in 0.042624 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Eyes_3_red.png
+  artifactKey: Guid(c076cba1597a70a42abb845e383a7772) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Eyes_3_red.png using Guid(c076cba1597a70a42abb845e383a7772) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcbd297e6354fc042164f029feebb0e9') in 0.048092 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Spider web_4.png
+  artifactKey: Guid(201f2d6ddcc55f3499566a7bd71197ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Spider web_4.png using Guid(201f2d6ddcc55f3499566a7bd71197ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8751e56ed5b5090f4e240b0b78ff54f') in 0.044503 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Candle_2.png
+  artifactKey: Guid(008f78cfdbee0c14bbe45a05c888058e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Candle_2.png using Guid(008f78cfdbee0c14bbe45a05c888058e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75cf4fcf21ba895d468e57f26d886405') in 0.039367 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Candy_1_V2.png
+  artifactKey: Guid(e9c2716b926868a4595c17e0a96a182e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Candy_1_V2.png using Guid(e9c2716b926868a4595c17e0a96a182e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be9fe8e58fb6bd83c6a36f6932d8ae53') in 0.039030 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Tombstone_3_V2.png
+  artifactKey: Guid(dfd4964102cade54d83583202dc53d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Tombstone_3_V2.png using Guid(dfd4964102cade54d83583202dc53d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b23851cdbb4a3adf07d2dd43513a1657') in 0.044110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Eyes_2_red.png
+  artifactKey: Guid(81b2ca1da502db545baad85a827f6653) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Eyes_2_red.png using Guid(81b2ca1da502db545baad85a827f6653) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e818459f89eb3d4b7b2aa33820020ad8') in 0.044482 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Tombstone_2_V1.png
+  artifactKey: Guid(4acce7ed66035f2408d3f664835f5b9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Tombstone_2_V1.png using Guid(4acce7ed66035f2408d3f664835f5b9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '339a81a2ad16be8d6df04af4e95a2770') in 0.038466 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Eyes_1_red.png
+  artifactKey: Guid(1b0100c5084f9864b9636834e9f177ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Eyes_1_red.png using Guid(1b0100c5084f9864b9636834e9f177ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0819695a82eaf0235ae133daf31376b9') in 0.040604 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Mouth_2.png
+  artifactKey: Guid(72d3cdf87ecc8274db2c045d8506a588) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Mouth_2.png using Guid(72d3cdf87ecc8274db2c045d8506a588) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '545894637d41ed3e0edc9409895e2138') in 0.038142 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Tree_5_V1.png
+  artifactKey: Guid(5ff5cc32ad0e7aa489fd86cedf62bdbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Tree_5_V1.png using Guid(5ff5cc32ad0e7aa489fd86cedf62bdbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c563ec212233b6ad81207bea64a00951') in 0.049166 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000112 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Jack o lantern_3.png
+  artifactKey: Guid(ca6349a8e65dd284cb92d90e787d1ec4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Jack o lantern_3.png using Guid(ca6349a8e65dd284cb92d90e787d1ec4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1da113aa64f63d9b5f080911a3c74749') in 0.052784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Cauldron_V1.png
+  artifactKey: Guid(959eea57eb06bb04fb8d698c7f7e0010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Cauldron_V1.png using Guid(959eea57eb06bb04fb8d698c7f7e0010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c2cdce36ea8851ccd59e10907e907b4') in 0.036771 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Eyes_3_yellow.png
+  artifactKey: Guid(3925d9113dbdbab40a93745e220eb5f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Eyes_3_yellow.png using Guid(3925d9113dbdbab40a93745e220eb5f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d0ac5a7e35b7401643cb39d1a99960b') in 0.042919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Mouth_1.png
+  artifactKey: Guid(c349275b11eb91f4880e5626633b8839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Mouth_1.png using Guid(c349275b11eb91f4880e5626633b8839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd046ffd4d4d534f76e63855202db2aac') in 0.045366 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Spider.png
+  artifactKey: Guid(0a84e4698d4e1d24ea9af90cfc4be02b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Spider.png using Guid(0a84e4698d4e1d24ea9af90cfc4be02b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c274f03c3631911572ccd4afc7229db') in 0.039866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Eyes_1_violet.png
+  artifactKey: Guid(887bf73d01dc5a74db12d21ad9be202f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Eyes_1_violet.png using Guid(887bf73d01dc5a74db12d21ad9be202f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31c596d1c5b8526d5bc609647c94e76f') in 0.045465 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Tree_2.png
+  artifactKey: Guid(7c70e88d8de149942bf28cf14af4e2d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Tree_2.png using Guid(7c70e88d8de149942bf28cf14af4e2d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84cf1720ae90286b16088eef0be6bccf') in 0.042635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Jack o lantern_1_V2.png
+  artifactKey: Guid(e149f22f775942048b4413f80fd3b1fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Jack o lantern_1_V2.png using Guid(e149f22f775942048b4413f80fd3b1fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63510b76aa44474695eb57a62b7c8b20') in 0.045696 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Eyes_1_green.png
+  artifactKey: Guid(aa93039cb577af94cbf391fc7f666a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Eyes_1_green.png using Guid(aa93039cb577af94cbf391fc7f666a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8af3970c88945ce22b2704f3865327ca') in 0.040654 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Tree_5_V2.png
+  artifactKey: Guid(839c4a226e47e0041a792582b3a662dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Tree_5_V2.png using Guid(839c4a226e47e0041a792582b3a662dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eac619e33cab90feb9043b0901a2211e') in 0.042294 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Witch hat_2.png
+  artifactKey: Guid(0996cd03b22e139419e00e91f16022c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Witch hat_2.png using Guid(0996cd03b22e139419e00e91f16022c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bfdb9281d337b8f18d768f133a7e519') in 0.034619 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Loli_1_V3.png
+  artifactKey: Guid(6bea670c14a85bd46b9a6dfb4495e3ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Halloween Decoration/Assets/Sprites/Single Sprites/Loli_1_V3.png using Guid(6bea670c14a85bd46b9a6dfb4495e3ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '523295a1e7ac05892f0074e0790976f2') in 0.036115 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
