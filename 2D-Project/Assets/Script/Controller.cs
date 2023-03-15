@@ -14,16 +14,18 @@ public class Controller : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    private void Update()
     {
-        direction.x = Input.GetAxisRaw("Horizontal");
-        direction.y = Input.GetAxisRaw("Vertical");
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            // 물리적인 힘을 가하는 함수
+            rigidBody.AddForce(Vector2.up * speed);
+        }
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate() // 0.02
     {
-        // 물리적인 힘을 가하는 함수
-        rigidBody.AddForce(direction.normalized * speed);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,6 +35,6 @@ public class Controller : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("2D 충돌");
+       
     }
 }
