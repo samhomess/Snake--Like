@@ -16,6 +16,8 @@ public class Controller : MonoBehaviour
 
     private void Update()
     {
+        if(GameManager.Instance.play == false) return;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // 물리적인 힘을 가하는 함수
@@ -30,11 +32,10 @@ public class Controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
+        if(collision.CompareTag("Death Zone"))
+        {
+            GameManager.Instance.play = false;
+        }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-       
     }
 }
