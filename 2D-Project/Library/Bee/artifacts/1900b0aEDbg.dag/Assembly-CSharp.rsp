@@ -380,6 +380,8 @@
 "Assets/Script/GameManager.cs"
 "Assets/Script/MapControl.cs"
 "Assets/Script/MapMove.cs"
+"Assets/Script/OOP Script/DeathTrigger.cs"
+"Assets/Script/OOP Script/ScoreTrigger.cs"
 -langversion:9.0
 
 /deterministic

@@ -32,10 +32,11 @@ public class Controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Death Zone"))
-        {
-            GameManager.Instance.play = false;
-        }
+        IFunction effect = collision.GetComponent<IFunction>();
 
+        if(effect != null)
+        {
+            effect.Function();
+        }
     }
 }

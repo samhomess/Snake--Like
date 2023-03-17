@@ -57,8 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\GameManager.cs" />
+    <Compile Include="Assets\Script\OOP Script\ScoreTrigger.cs" />
     <Compile Include="Assets\Script\MapControl.cs" />
     <Compile Include="Assets\2D ToonBear\Demo\Scripts\bearController.cs" />
+    <Compile Include="Assets\Script\OOP Script\DeathTrigger.cs" />
     <Compile Include="Assets\Script\MapMove.cs" />
     <Compile Include="Assets\Script\Controller.cs" />
   </ItemGroup>
