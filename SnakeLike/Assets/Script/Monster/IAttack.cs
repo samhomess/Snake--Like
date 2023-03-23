@@ -1,7 +1,7 @@
 
 public interface IAttack
 {
-    void Use();
+     void Use();
 }
 
 
