@@ -61,8 +61,9 @@
     <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\Script\Monster\Slime.cs" />
     <Compile Include="Assets\Script\Monster\Monster.cs" />
-    <Compile Include="Assets\Script\Monster\Goblin.cs" />
     <Compile Include="Assets\Script\SceneMoveManager.cs" />
+    <Compile Include="Assets\Script\Monster\Goblin.cs" />
+    <Compile Include="Assets\Script\Monster\CreateUnit.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -331,6 +332,12 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.14f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.14f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.14f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
