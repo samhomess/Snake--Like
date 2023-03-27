@@ -12,6 +12,8 @@ public class Monster : MonoBehaviour, IAttack
     protected Transform player;
     protected SpriteRenderer spriteRenderer;
 
+    protected MemoryPool memoryPool;
+
     protected virtual void Start()
     {
         speed = 1.0f;
@@ -19,8 +21,13 @@ public class Monster : MonoBehaviour, IAttack
         player = GameObject.Find("Character").GetComponent<Transform>();
     }
 
-    public void Use()
+    virtual public void Use()
     {
-        
+        Debug.Log("Monster Use");
+    }
+
+    public void SetUp(MemoryPool memoryPool)
+    {
+        this.memoryPool = memoryPool;
     }
 }

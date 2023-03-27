@@ -62,6 +62,7 @@ public class Player : MonoBehaviour
 
         if (obj != null)
         {
+            obj.Use();
             Damage(monster);
         }
 
