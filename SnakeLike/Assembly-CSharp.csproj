@@ -56,15 +56,16 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\FollowCamera.cs" />
+    <Compile Include="Assets\Script\Player\FollowCamera.cs" />
     <Compile Include="Assets\Script\Monster\IAttack.cs" />
-    <Compile Include="Assets\Script\Player.cs" />
+    <Compile Include="Assets\Script\Player\Player.cs" />
     <Compile Include="Assets\Script\Monster\Slime.cs" />
     <Compile Include="Assets\Script\Monster\Monster.cs" />
     <Compile Include="Assets\Script\SceneMoveManager.cs" />
     <Compile Include="Assets\Script\Monster\CreateUnit.cs" />
-    <Compile Include="Assets\Script\Monster\Goblin.cs" />
     <Compile Include="Assets\Script\MemoryPool.cs" />
+    <Compile Include="Assets\Script\Monster\Goblin.cs" />
+    <Compile Include="Assets\Script\Player\DataManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

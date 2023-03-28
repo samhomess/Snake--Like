@@ -24,17 +24,19 @@ public class MemoryPool
 
         poolItemList = new List<PoolItem>();
 
-        InstantiateObjects();
+        InstantiateObjects(this.poolObject);
     }
 
 
-    public void InstantiateObjects()
+    public void InstantiateObjects(GameObject poolObject)
     {
         maxCount += increaseCount;
 
         for(int i = 0; i < increaseCount; i++)
         {
             PoolItem poolItem = new PoolItem();
+
+            this.poolObject = poolObject;
 
             poolItem.gameObject = GameObject.Instantiate(poolObject);
             poolItem.gameObject.SetActive(false);
@@ -43,7 +45,7 @@ public class MemoryPool
         }
     }
 
-    public GameObject ActivatePoolItem()
+    public GameObject ActivatePoolItem(GameObject poolObject)
     {
         if(poolItemList == null)
         {
@@ -54,7 +56,7 @@ public class MemoryPool
         // 현재 활성화된 상태의 게임 오브젝트 비교   
         if(maxCount == activeCount)
         {
-            InstantiateObjects();
+            InstantiateObjects(poolObject);
         }
         
         for(int i = 0; i < poolItemList.Count; i++)
