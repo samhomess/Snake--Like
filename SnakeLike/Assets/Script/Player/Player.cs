@@ -6,17 +6,23 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float speed = 1.0f;
     [SerializeField] int health = 100;
+    [SerializeField] Material flashMaterial;
 
     private Vector2 direction;
-    private SpriteRenderer spriteRenderer;
-    private Rigidbody2D rigidBody2D;
     private Animator animator;
+    private Rigidbody2D rigidBody2D;
+    private Material originalMaterial;
+    private SpriteRenderer spriteRenderer;
+
+    private WaitForSeconds wait = new WaitForSeconds(0.125f);
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigidBody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        originalMaterial = spriteRenderer.material;
     }
 
     public void Damage(Monster monster)
@@ -54,6 +60,15 @@ public class Player : MonoBehaviour
             * speed * Time.fixedDeltaTime; 
     }
 
+    public IEnumerator Flash()
+    {
+        spriteRenderer.material = flashMaterial;
+
+        yield return wait;
+
+        spriteRenderer.material = originalMaterial;
+    }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         IAttack obj = collision.GetComponent<IAttack>();
@@ -62,11 +77,10 @@ public class Player : MonoBehaviour
 
         if (obj != null)
         {
+            StartCoroutine(Flash());
             obj.Use();
             Damage(monster);
         }
-
-        Debug.Log("공격받은 나의 체력 : " + health);
     }
 
 }

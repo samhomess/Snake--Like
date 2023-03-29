@@ -14,9 +14,9 @@ public class Slime : Monster
 
     public override void Use()
     {
-        memoryPool.DeactivatePoolItem(gameObject);
+        SoundManager.instance.Sound(SoundManager.SoundType.Attack);
+        //memoryPool.DeactivatePoolItem(gameObject);
     }
-
 
     public void Update()
     {

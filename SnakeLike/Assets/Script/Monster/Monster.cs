@@ -5,11 +5,11 @@ using UnityEngine;
 public class Monster : MonoBehaviour, IAttack
 {
     public int attack;
-
+ 
     protected int health;
     protected float speed;
-    protected Vector2 direction;
     protected Transform player;
+    protected Vector2 direction;
     protected SpriteRenderer spriteRenderer;
 
     protected MemoryPool memoryPool;

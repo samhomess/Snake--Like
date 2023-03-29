@@ -66,6 +66,7 @@
     <Compile Include="Assets\Script\MemoryPool.cs" />
     <Compile Include="Assets\Script\Monster\Goblin.cs" />
     <Compile Include="Assets\Script\Player\DataManager.cs" />
+    <Compile Include="Assets\Script\SoundManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

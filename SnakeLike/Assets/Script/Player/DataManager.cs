@@ -8,8 +8,6 @@ using UnityEngine;
 public class Data 
 {
     public int score;
- 
-    readonly int c;
 }
 
 public class DataManager : MonoBehaviour

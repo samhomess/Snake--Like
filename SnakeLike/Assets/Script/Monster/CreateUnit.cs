@@ -23,7 +23,7 @@ public class CreateUnit : MonoBehaviour
 
     IEnumerator Create()
     {
-        var wait = new WaitForSeconds(5f);
+        var wait = new WaitForSeconds(2.5f);
 
         while (true)
         {
