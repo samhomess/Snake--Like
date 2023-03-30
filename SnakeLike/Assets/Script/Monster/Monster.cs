@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,9 @@ using UnityEngine;
 public class Monster : MonoBehaviour, IAttack
 {
     public int attack;
- 
+    public Animator animator;
+  
+
     protected int health;
     protected float speed;
     protected Transform player;
@@ -17,6 +20,7 @@ public class Monster : MonoBehaviour, IAttack
     protected virtual void Start()
     {
         speed = 1.0f;
+        animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.Find("Character").GetComponent<Transform>();
     }
@@ -29,5 +33,13 @@ public class Monster : MonoBehaviour, IAttack
     public void SetUp(MemoryPool memoryPool)
     {
         this.memoryPool = memoryPool;
+    }
+
+    protected void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.name == "Character")
+        {
+            animator.SetBool("Attack", false);
+        }
     }
 }

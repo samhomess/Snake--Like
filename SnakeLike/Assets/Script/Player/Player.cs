@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Monster;
 
 public class Player : MonoBehaviour
 {
@@ -79,8 +80,7 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(Flash());
             obj.Use();
-            Damage(monster);
+            Damage(monster);   
         }
     }
-
 }
