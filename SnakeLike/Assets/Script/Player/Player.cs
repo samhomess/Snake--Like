@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,8 @@ public class Player : MonoBehaviour
 
     private WaitForSeconds wait = new WaitForSeconds(0.125f);
 
+    static public Action<Monster> function;
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -24,11 +27,14 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
 
         originalMaterial = spriteRenderer.material;
+
+        function = Damage;
     }
 
     public void Damage(Monster monster)
     {
         health -= monster.attack;
+        Debug.Log(health);
     }
 
     void Update()
@@ -57,6 +63,14 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate() 
     {
+        Vector3 convertedPosition = Camera.main.WorldToViewportPoint(rigidBody2D.position);
+
+        // 매개 변수 (제한하고 싶은 값, 최솟값, 최댓값)
+        convertedPosition.x = Mathf.Clamp(convertedPosition.x, 0.035f, 0.965f);
+        convertedPosition.y = Mathf.Clamp(convertedPosition.y, 0.035f, 0.9125f);
+
+        rigidBody2D.position = Camera.main.ViewportToWorldPoint(convertedPosition);
+
         rigidBody2D.velocity = direction.normalized 
             * speed * Time.fixedDeltaTime; 
     }
@@ -74,13 +88,10 @@ public class Player : MonoBehaviour
     {
         IAttack obj = collision.GetComponent<IAttack>();
 
-        var monster = collision.GetComponent<Monster>();
-
         if (obj != null)
         {
             StartCoroutine(Flash());
-            obj.Use();
-            Damage(monster);   
+            obj.Use();   
         }
     }
 }

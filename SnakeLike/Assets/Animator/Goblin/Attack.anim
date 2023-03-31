@@ -88,9 +88,9 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.5833333
-    functionName: 
+    functionName: Damage
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 3381042155222746766, guid: 1dbd000362b853945834a3fbb10388b3, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
