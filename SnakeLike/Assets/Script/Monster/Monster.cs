@@ -26,7 +26,8 @@ public class Monster : MonoBehaviour, IAttack
 
     public void Damage()
     {
-        Player.function(this);     
+        Player.function(this);
+        SoundManager.instance.Sound(SoundManager.SoundType.Attack);
     }
 
     virtual public void Use()
